@@ -19,7 +19,7 @@ limitations under the License.
 package fake
 
 import (
-	productv1alpha1 "github.com/flyer103/minimalist-operator/pkg/apis/example/v1alpha1"
+	productv1alpha1 "github.com/scorpinxia/mysql-operator/pkg/apis/mysql/v1alpha1"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	runtime "k8s.io/apimachinery/pkg/runtime"
 	schema "k8s.io/apimachinery/pkg/runtime/schema"

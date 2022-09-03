@@ -7,8 +7,8 @@ import (
 // +genclient
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
 
-// Example is a simple user-defined resource.
-type Example struct {
+// MySQL is a simple user-defined resource.
+type MySQL struct {
 	metav1.TypeMeta   `json:",inline"`
 	metav1.ObjectMeta `json:"metadata,omitempty"`
 
@@ -16,22 +16,23 @@ type Example struct {
 	Status ExampleStatus `json:"status"`
 }
 
-// ExampleSpec is the spec fo Example.
-type ExampleSpec struct {
-	Nginx string `json:"nginx"`
+// MySQLSpec is the spec fo Example.
+type MySQLSpec struct {
+	Version string `json:"version"`
 }
 
-// ExampleStatus is the status of Example.
-type ExampleStatus struct {
+// MySQLStatus is the status of Example.
+type MySQLStatus struct {
+	Code    string `json:"code"`
 	Message string `json:"message"`
 }
 
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
 
-// ExampleList is the list of Example resources.
-type ExampleList struct {
+// MySQLList is the list of Example resources.
+type MySQLList struct {
 	metav1.TypeMeta `json:",inline"`
 	metav1.ListMeta `json:"metadata"`
 
-	Items []Example `json:"items"`
+	Items []MySQL `json:"items"`
 }

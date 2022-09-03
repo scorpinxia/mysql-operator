@@ -19,7 +19,7 @@ limitations under the License.
 package v1alpha1
 
 import (
-	internalinterfaces "github.com/flyer103/minimalist-operator/pkg/clients/informers/externalversions/internalinterfaces"
+	internalinterfaces "github.com/scorpinxia/mysql-operator/pkg/clients/informers/externalversions/internalinterfaces"
 )
 
 // Interface provides access to all the informers in this group version.

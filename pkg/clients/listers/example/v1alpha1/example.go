@@ -19,7 +19,7 @@ limitations under the License.
 package v1alpha1
 
 import (
-	v1alpha1 "github.com/flyer103/minimalist-operator/pkg/apis/example/v1alpha1"
+	v1alpha1 "github.com/scorpinxia/mysql-operator/pkg/apis/mysql/v1alpha1"
 	"k8s.io/apimachinery/pkg/api/errors"
 	"k8s.io/apimachinery/pkg/labels"
 	"k8s.io/client-go/tools/cache"
@@ -93,7 +93,7 @@ func (s exampleNamespaceLister) Get(name string) (*v1alpha1.Example, error) {
 		return nil, err
 	}
 	if !exists {
-		return nil, errors.NewNotFound(v1alpha1.Resource("example"), name)
+		return nil, errors.NewNotFound(v1alpha1.Resource("mysql"), name)
 	}
 	return obj.(*v1alpha1.Example), nil
 }

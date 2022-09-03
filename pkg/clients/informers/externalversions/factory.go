@@ -23,9 +23,9 @@ import (
 	sync "sync"
 	time "time"
 
-	versioned "github.com/flyer103/minimalist-operator/pkg/clients/clientset/versioned"
-	example "github.com/flyer103/minimalist-operator/pkg/clients/informers/externalversions/example"
-	internalinterfaces "github.com/flyer103/minimalist-operator/pkg/clients/informers/externalversions/internalinterfaces"
+	versioned "github.com/scorpinxia/mysql-operator/pkg/clients/clientset/versioned"
+	example "github.com/scorpinxia/mysql-operator/pkg/clients/informers/externalversions/example"
+	internalinterfaces "github.com/scorpinxia/mysql-operator/pkg/clients/informers/externalversions/internalinterfaces"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	runtime "k8s.io/apimachinery/pkg/runtime"
 	schema "k8s.io/apimachinery/pkg/runtime/schema"

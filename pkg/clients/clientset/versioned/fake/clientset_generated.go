@@ -19,9 +19,9 @@ limitations under the License.
 package fake
 
 import (
-	clientset "github.com/flyer103/minimalist-operator/pkg/clients/clientset/versioned"
-	productv1alpha1 "github.com/flyer103/minimalist-operator/pkg/clients/clientset/versioned/typed/example/v1alpha1"
-	fakeproductv1alpha1 "github.com/flyer103/minimalist-operator/pkg/clients/clientset/versioned/typed/example/v1alpha1/fake"
+	clientset "github.com/scorpinxia/mysql-operator/pkg/clients/clientset/versioned"
+	productv1alpha1 "github.com/scorpinxia/mysql-operator/pkg/clients/clientset/versioned/typed/example/v1alpha1"
+	fakeproductv1alpha1 "github.com/scorpinxia/mysql-operator/pkg/clients/clientset/versioned/typed/example/v1alpha1/fake"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/watch"
 	"k8s.io/client-go/discovery"

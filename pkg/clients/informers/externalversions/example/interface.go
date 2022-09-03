@@ -19,8 +19,8 @@ limitations under the License.
 package example
 
 import (
-	v1alpha1 "github.com/flyer103/minimalist-operator/pkg/clients/informers/externalversions/example/v1alpha1"
-	internalinterfaces "github.com/flyer103/minimalist-operator/pkg/clients/informers/externalversions/internalinterfaces"
+	v1alpha1 "github.com/scorpinxia/mysql-operator/pkg/clients/informers/externalversions/example/v1alpha1"
+	internalinterfaces "github.com/scorpinxia/mysql-operator/pkg/clients/informers/externalversions/internalinterfaces"
 )
 
 // Interface provides access to each of this group's versions.

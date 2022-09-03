@@ -1,5 +1,5 @@
 GODIR = $(shell go list ./... | grep -v /vendor/)
-PKG := github.com/flyer103/minimalist-operator
+PKG := github.com/scorpinxia/mysql-operator
 BUILD_IMAGE ?= golang:1.19
 GOARCH := amd64
 # GOOS := linux
@@ -20,8 +20,8 @@ build-dirs: pre-build
 .PHONY: build-resource
 build-resource: pre-build
 	@./hack/generate-groups.sh "deepcopy,client,informer,lister" \
-	github.com/flyer103/minimalist-operator/pkg/clients \
-	github.com/flyer103/minimalist-operator/pkg/apis \
+	github.com/scorpinxia/mysql-operator/pkg/clients \
+	github.com/scorpinxia/mysql-operator/pkg/apis \
 	"example:v1alpha1"
 
 .PHONY: build-operator

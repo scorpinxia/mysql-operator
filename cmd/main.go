@@ -8,9 +8,9 @@ import (
 	"k8s.io/client-go/tools/clientcmd"
 	"k8s.io/klog/v2"
 
-	crclientset "github.com/flyer103/minimalist-operator/pkg/clients/clientset/versioned"
-	crinformer "github.com/flyer103/minimalist-operator/pkg/clients/informers/externalversions"
-	crcontroller "github.com/flyer103/minimalist-operator/pkg/controller"
+	crclientset "github.com/scorpinxia/mysql-operator/pkg/clients/clientset/versioned"
+	crinformer "github.com/scorpinxia/mysql-operator/pkg/clients/informers/externalversions"
+	crcontroller "github.com/scorpinxia/mysql-operator/pkg/controller"
 )
 
 var kubeconfig string

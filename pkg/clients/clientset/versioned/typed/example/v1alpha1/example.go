@@ -22,8 +22,8 @@ import (
 	"context"
 	"time"
 
-	v1alpha1 "github.com/flyer103/minimalist-operator/pkg/apis/example/v1alpha1"
-	scheme "github.com/flyer103/minimalist-operator/pkg/clients/clientset/versioned/scheme"
+	v1alpha1 "github.com/scorpinxia/mysql-operator/pkg/apis/mysql/v1alpha1"
+	scheme "github.com/scorpinxia/mysql-operator/pkg/clients/clientset/versioned/scheme"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	types "k8s.io/apimachinery/pkg/types"
 	watch "k8s.io/apimachinery/pkg/watch"
@@ -64,7 +64,7 @@ func newExamples(c *ProductV1alpha1Client, namespace string) *examples {
 	}
 }
 
-// Get takes name of the example, and returns the corresponding example object, and an error if there is any.
+// Get takes name of the mysql, and returns the corresponding mysql object, and an error if there is any.
 func (c *examples) Get(ctx context.Context, name string, options v1.GetOptions) (result *v1alpha1.Example, err error) {
 	result = &v1alpha1.Example{}
 	err = c.client.Get().
@@ -109,7 +109,7 @@ func (c *examples) Watch(ctx context.Context, opts v1.ListOptions) (watch.Interf
 		Watch(ctx)
 }
 
-// Create takes the representation of a example and creates it.  Returns the server's representation of the example, and an error, if there is any.
+// Create takes the representation of a mysql and creates it.  Returns the server's representation of the mysql, and an error, if there is any.
 func (c *examples) Create(ctx context.Context, example *v1alpha1.Example, opts v1.CreateOptions) (result *v1alpha1.Example, err error) {
 	result = &v1alpha1.Example{}
 	err = c.client.Post().
@@ -122,7 +122,7 @@ func (c *examples) Create(ctx context.Context, example *v1alpha1.Example, opts v
 	return
 }
 
-// Update takes the representation of a example and updates it. Returns the server's representation of the example, and an error, if there is any.
+// Update takes the representation of a mysql and updates it. Returns the server's representation of the mysql, and an error, if there is any.
 func (c *examples) Update(ctx context.Context, example *v1alpha1.Example, opts v1.UpdateOptions) (result *v1alpha1.Example, err error) {
 	result = &v1alpha1.Example{}
 	err = c.client.Put().
@@ -152,7 +152,7 @@ func (c *examples) UpdateStatus(ctx context.Context, example *v1alpha1.Example, 
 	return
 }
 
-// Delete takes name of the example and deletes it. Returns an error if one occurs.
+// Delete takes name of the mysql and deletes it. Returns an error if one occurs.
 func (c *examples) Delete(ctx context.Context, name string, opts v1.DeleteOptions) error {
 	return c.client.Delete().
 		Namespace(c.ns).
@@ -179,7 +179,7 @@ func (c *examples) DeleteCollection(ctx context.Context, opts v1.DeleteOptions, 
 		Error()
 }
 
-// Patch applies the patch and returns the patched example.
+// Patch applies the patch and returns the patched mysql.
 func (c *examples) Patch(ctx context.Context, name string, pt types.PatchType, data []byte, opts v1.PatchOptions, subresources ...string) (result *v1alpha1.Example, err error) {
 	result = &v1alpha1.Example{}
 	err = c.client.Patch(pt).

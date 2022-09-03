@@ -22,7 +22,7 @@ import (
 	"fmt"
 	"net/http"
 
-	productv1alpha1 "github.com/flyer103/minimalist-operator/pkg/clients/clientset/versioned/typed/example/v1alpha1"
+	productv1alpha1 "github.com/scorpinxia/mysql-operator/pkg/clients/clientset/versioned/typed/example/v1alpha1"
 	discovery "k8s.io/client-go/discovery"
 	rest "k8s.io/client-go/rest"
 	flowcontrol "k8s.io/client-go/util/flowcontrol"

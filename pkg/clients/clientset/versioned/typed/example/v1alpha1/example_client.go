@@ -21,8 +21,8 @@ package v1alpha1
 import (
 	"net/http"
 
-	v1alpha1 "github.com/flyer103/minimalist-operator/pkg/apis/example/v1alpha1"
-	"github.com/flyer103/minimalist-operator/pkg/clients/clientset/versioned/scheme"
+	v1alpha1 "github.com/scorpinxia/mysql-operator/pkg/apis/mysql/v1alpha1"
+	"github.com/scorpinxia/mysql-operator/pkg/clients/clientset/versioned/scheme"
 	rest "k8s.io/client-go/rest"
 )
 

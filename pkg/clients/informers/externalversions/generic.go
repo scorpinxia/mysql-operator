@@ -21,7 +21,7 @@ package externalversions
 import (
 	"fmt"
 
-	v1alpha1 "github.com/flyer103/minimalist-operator/pkg/apis/example/v1alpha1"
+	v1alpha1 "github.com/scorpinxia/mysql-operator/pkg/apis/mysql/v1alpha1"
 	schema "k8s.io/apimachinery/pkg/runtime/schema"
 	cache "k8s.io/client-go/tools/cache"
 )

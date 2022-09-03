@@ -8,9 +8,9 @@ import (
 	"k8s.io/client-go/tools/cache"
 	"k8s.io/klog/v2"
 
-	examplealpha1 "github.com/flyer103/minimalist-operator/pkg/apis/example/v1alpha1"
-	crclientset "github.com/flyer103/minimalist-operator/pkg/clients/clientset/versioned"
-	crinformer "github.com/flyer103/minimalist-operator/pkg/clients/informers/externalversions/example/v1alpha1"
+	examplealpha1 "github.com/scorpinxia/mysql-operator/pkg/apis/mysql/v1alpha1"
+	crclientset "github.com/scorpinxia/mysql-operator/pkg/clients/clientset/versioned"
+	crinformer "github.com/scorpinxia/mysql-operator/pkg/clients/informers/externalversions/example/v1alpha1"
 )
 
 type Controller struct {

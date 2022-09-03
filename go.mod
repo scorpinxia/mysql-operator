@@ -1,4 +1,4 @@
-module github.com/flyer103/minimalist-operator
+module github.com/scorpinxia/mysql-operator
 
 go 1.19
 
