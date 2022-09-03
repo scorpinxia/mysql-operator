@@ -20,8 +20,8 @@ package fake
 
 import (
 	clientset "github.com/scorpinxia/mysql-operator/pkg/clients/clientset/versioned"
-	productv1alpha1 "github.com/scorpinxia/mysql-operator/pkg/clients/clientset/versioned/typed/example/v1alpha1"
-	fakeproductv1alpha1 "github.com/scorpinxia/mysql-operator/pkg/clients/clientset/versioned/typed/example/v1alpha1/fake"
+	productv1alpha1 "github.com/scorpinxia/mysql-operator/pkg/clients/clientset/versioned/typed/mysql/v1alpha1"
+	fakeproductv1alpha1 "github.com/scorpinxia/mysql-operator/pkg/clients/clientset/versioned/typed/mysql/v1alpha1/fake"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/watch"
 	"k8s.io/client-go/discovery"

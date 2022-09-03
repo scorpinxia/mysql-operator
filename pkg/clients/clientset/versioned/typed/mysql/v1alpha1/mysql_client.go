@@ -28,7 +28,7 @@ import (
 
 type ProductV1alpha1Interface interface {
 	RESTClient() rest.Interface
-	ExamplesGetter
+	MySQLsGetter
 }
 
 // ProductV1alpha1Client is used to interact with features provided by the product.company.com group.
@@ -36,8 +36,8 @@ type ProductV1alpha1Client struct {
 	restClient rest.Interface
 }
 
-func (c *ProductV1alpha1Client) Examples(namespace string) ExampleInterface {
-	return newExamples(c, namespace)
+func (c *ProductV1alpha1Client) MySQLs(namespace string) MySQLInterface {
+	return newMySQLs(c, namespace)
 }
 
 // NewForConfig creates a new ProductV1alpha1Client for the given config.

@@ -22,7 +22,7 @@ build-resource: pre-build
 	@./hack/generate-groups.sh "deepcopy,client,informer,lister" \
 	github.com/scorpinxia/mysql-operator/pkg/clients \
 	github.com/scorpinxia/mysql-operator/pkg/apis \
-	"example:v1alpha1"
+	"mysql:v1alpha1"
 
 .PHONY: build-operator
 build-operator: build-dirs build-resource

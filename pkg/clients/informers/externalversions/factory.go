@@ -24,8 +24,8 @@ import (
 	time "time"
 
 	versioned "github.com/scorpinxia/mysql-operator/pkg/clients/clientset/versioned"
-	example "github.com/scorpinxia/mysql-operator/pkg/clients/informers/externalversions/example"
 	internalinterfaces "github.com/scorpinxia/mysql-operator/pkg/clients/informers/externalversions/internalinterfaces"
+	mysql "github.com/scorpinxia/mysql-operator/pkg/clients/informers/externalversions/mysql"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	runtime "k8s.io/apimachinery/pkg/runtime"
 	schema "k8s.io/apimachinery/pkg/runtime/schema"
@@ -172,9 +172,9 @@ type SharedInformerFactory interface {
 	ForResource(resource schema.GroupVersionResource) (GenericInformer, error)
 	WaitForCacheSync(stopCh <-chan struct{}) map[reflect.Type]bool
 
-	Product() example.Interface
+	Product() mysql.Interface
 }
 
-func (f *sharedInformerFactory) Product() example.Interface {
-	return example.New(f, f.namespace, f.tweakListOptions)
+func (f *sharedInformerFactory) Product() mysql.Interface {
+	return mysql.New(f, f.namespace, f.tweakListOptions)
 }

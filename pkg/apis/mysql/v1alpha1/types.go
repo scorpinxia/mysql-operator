@@ -12,8 +12,8 @@ type MySQL struct {
 	metav1.TypeMeta   `json:",inline"`
 	metav1.ObjectMeta `json:"metadata,omitempty"`
 
-	Spec   ExampleSpec   `json:"spec"`
-	Status ExampleStatus `json:"status"`
+	Spec   MySQLSpec   `json:"spec"`
+	Status MySQLStatus `json:"status"`
 }
 
 // MySQLSpec is the spec fo Example.

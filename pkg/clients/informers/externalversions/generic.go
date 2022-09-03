@@ -53,8 +53,8 @@ func (f *genericInformer) Lister() cache.GenericLister {
 func (f *sharedInformerFactory) ForResource(resource schema.GroupVersionResource) (GenericInformer, error) {
 	switch resource {
 	// Group=product.company.com, Version=v1alpha1
-	case v1alpha1.SchemeGroupVersion.WithResource("examples"):
-		return &genericInformer{resource: resource.GroupResource(), informer: f.Product().V1alpha1().Examples().Informer()}, nil
+	case v1alpha1.SchemeGroupVersion.WithResource("mysqls"):
+		return &genericInformer{resource: resource.GroupResource(), informer: f.Product().V1alpha1().MySQLs().Informer()}, nil
 
 	}
 

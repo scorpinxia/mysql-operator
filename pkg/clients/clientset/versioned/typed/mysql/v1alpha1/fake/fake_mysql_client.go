@@ -19,7 +19,7 @@ limitations under the License.
 package fake
 
 import (
-	v1alpha1 "github.com/scorpinxia/mysql-operator/pkg/clients/clientset/versioned/typed/example/v1alpha1"
+	v1alpha1 "github.com/scorpinxia/mysql-operator/pkg/clients/clientset/versioned/typed/mysql/v1alpha1"
 	rest "k8s.io/client-go/rest"
 	testing "k8s.io/client-go/testing"
 )
@@ -28,8 +28,8 @@ type FakeProductV1alpha1 struct {
 	*testing.Fake
 }
 
-func (c *FakeProductV1alpha1) Examples(namespace string) v1alpha1.ExampleInterface {
-	return &FakeExamples{c, namespace}
+func (c *FakeProductV1alpha1) MySQLs(namespace string) v1alpha1.MySQLInterface {
+	return &FakeMySQLs{c, namespace}
 }
 
 // RESTClient returns a RESTClient that is used to communicate
