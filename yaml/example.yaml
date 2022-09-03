@@ -1,6 +1,6 @@
-apiVersion: product.company.com/v1alpha1
-kind: Example
+apiVersion: volc.bytedance.com/v1alpha1
+kind: MySQL
 metadata:
   name: demo
 spec:
-  nginx: 1.23.1
+  version: 8.0.27
