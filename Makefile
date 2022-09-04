@@ -24,6 +24,13 @@ build-resource: pre-build
 	github.com/scorpinxia/mysql-operator/pkg/apis \
 	"mysql:v1alpha1"
 
+.PHONY: build-resource-local
+build-resource-local: pre-build
+	@./hack/generate-groups.sh "deepcopy,client,informer,lister" \
+	./pkg/clients \
+	github.com/scorpinxia/mysql-operator/pkg/apis \
+	"mysql:v1alpha1"
+
 .PHONY: build-operator
 build-operator: build-dirs build-resource
 	@docker run                                                            \

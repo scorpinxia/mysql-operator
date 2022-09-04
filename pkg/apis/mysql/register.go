@@ -1,3 +1,3 @@
 package mysql
 
-const GroupName = "product.company.com"
+const GroupName = "volc.bytedance.com"

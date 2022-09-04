@@ -20,7 +20,8 @@ spec:
           status:
             type: object
             properties:
-              code: success
+              code:
+                type: string
               message:
                 type: string
     subresources:

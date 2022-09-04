@@ -1,6 +1,6 @@
 The project is designed to implement a K8s Operator with as few tools as possible and understand the K8s Operator core logic.
 
-# How to write an Operator
+# How to write an MySQL Operator
 
 1. Write CRD and register CR with kube-apiserver: [crd.yaml](./yaml/crd.yaml)
 2. Write resource definitions through code:
@@ -35,3 +35,4 @@ $ make build-operator
 # Run operator outside of Cluster.
 $ ./release/operator -kubeconfig ~/.kube/config
 ```
+
